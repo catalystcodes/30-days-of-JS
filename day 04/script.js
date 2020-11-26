@@ -114,14 +114,12 @@
 // checkDay('Monday')
 
 
-let day = prompt('Enter a day');
+// let day = prompt('Enter a day');
 
-if (day === 'Saturday' || day === 'Sunday') {
-    alert(`${day} is a weekend`)
-} else {
-    alert(`${day} is a working day`)
-}
-
-
-
-//Exercises: Level 2
+// if (day === 'Saturday' || day === 'Sunday') {
+//     alert(`${day} is a weekend`)
+// } else if (day === "") {
+//     alert("This is an invalid input")
+// } else {
+//     alert(`${day} is a working day`)
+// }
