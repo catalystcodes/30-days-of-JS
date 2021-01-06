@@ -10,7 +10,7 @@ const person = {
         pobox: 2002,
         city: 'Helsinki'
     },
-    getPersonInfo: function(a) {
+    getPersonInfo: function() {
         return `I am ${this.firstName} and I live in ${this.city}, ${this.country}. I am ${this.age}.`
     }
 }
@@ -30,3 +30,22 @@ console.log(whole)
 
 console.log(person.hasOwnProperty('name'))
 console.log(person.hasOwnProperty('firstName'))
+
+
+/*
+    Execrise: Level 1
+*/
+
+const dog = {
+    name: 'Jark',
+    legs: '4',
+    color: 'black & brown',
+    age: 20,
+    bark: 'woof woof',
+    getDogInfo: function() {
+        return `I am ${this.name}, i have ${this.legs} legs, i'm having ${this.color} skin and i'm ${this.age} years old`
+    }
+}
+
+console.log(dog.getDogInfo())
+console.log(dog)
