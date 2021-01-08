@@ -120,3 +120,14 @@ const highestPerson = people.filter(person => {
 })
 
 console.log(highestPerson.join(', '), highestSkills)
+
+
+
+// console.log(user)
+
+const isLoggedIn = Object.keys(users).filter(user => users[user].isLoggedIn)
+console.log(isLoggedIn)
+
+const pointUpTo50 = Object.keys(users).filter(user => users[user].points >= 50)
+
+console.log(pointUpTo50)
