@@ -123,7 +123,6 @@ console.log(highestPerson.join(', '), highestSkills)
 
 
 
-// console.log(user)
 
 const isLoggedIn = Object.keys(users).filter(user => users[user].isLoggedIn)
 console.log(isLoggedIn)
@@ -131,3 +130,26 @@ console.log(isLoggedIn)
 const pointUpTo50 = Object.keys(users).filter(user => users[user].points >= 50)
 
 console.log(pointUpTo50)
+
+
+const skillsOnly = people.map(person => {
+        const personData = users[person]
+        return personData.skills
+    })
+    //MERN STACK
+
+let MERN = ['MongoDB', 'Express', 'React', 'Node']
+console.log(skillsOnly)
+
+const personSkills = []
+
+people.forEach(person => {
+    const personObj = { name: person, skills: users[person].skills }
+    personSkills.push(personObj)
+})
+const mernStack = personSkills.filter(item => {
+    return MERN.every(stack => item.skills.includes(stack))
+})
+
+// console.log(mernStack)
+mernStack.forEach(item => { console.log(item.name) })
