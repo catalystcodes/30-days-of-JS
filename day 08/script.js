@@ -153,3 +153,7 @@ const mernStack = personSkills.filter(item => {
 
 // console.log(mernStack)
 mernStack.forEach(item => { console.log(item.name) })
+
+//Set your name in the users object without modifying the original users object
+
+console.log(people.push("Mubaraq"))
