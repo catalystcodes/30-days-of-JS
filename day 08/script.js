@@ -157,3 +157,10 @@ mernStack.forEach(item => { console.log(item.name) })
 //Set your name in the users object without modifying the original users object
 
 console.log(people.push("Mubaraq"))
+
+//Get all keys or properties of users object
+
+let allKeys = people
+    // console.log(allKeys)
+
+console.log(Object.getOwnPropertyNames(allKeys))
