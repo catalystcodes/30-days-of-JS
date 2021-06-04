@@ -17,9 +17,9 @@ console.log(sum)
 
 
 //Question 2
-let points = '-1,2,-4,-3,-1,0,4,8'
-let sortedPoint = /-4|-3|-1|-1|0|2|4|8/g
-let extractedNumber = points.match(sortedPoint)
+let words = 'The position of some particles on the horizontal x-axis -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction. Extract these numbers and find the distance between the two furthest particles.'
+let extractedNo = /-*\d+/gi
+let extractedNumber = words.match(extractedNo)
 
 console.log(extractedNumber)
 
@@ -32,3 +32,22 @@ for(let i = 0; i < extractedNumber.length; i++){
 
 console.log(sumOfExtractedNumber)
 
+
+
+
+//Level 2
+
+const tenMostFrequentWords = (string, wordNoOfAppearance) => {
+  const toArray = string.match(/[a-z]+/ig)
+  const frequent = {}
+  toArray.forEach(value => {
+    if (frequent[value]) frequent[value] += 1
+    else frequent[value] = 1
+  })
+  const DividedFrequent = Object.entries(frequent)
+  const frequently = DividedFrequent.map(item => {
+    return { word: item[0], count: item[1] }
+  })
+  return frequently.sort((a, b) => b.count - a.count).splice(0, wordNoOfAppearance)
+}
+console.log(tenMostFrequentWords('I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.', 7))
