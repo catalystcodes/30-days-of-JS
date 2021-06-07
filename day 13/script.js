@@ -1,23 +1,23 @@
 //Exercises:Level 1
 
-// const countries = [
-//     ['Finland', 'Helsinki'],
-//     ['Sweden', 'Stockholm'],
-//     ['Norway', 'Oslo']
-// ]
+const countries = [
+    ['Finland', 'Helsinki'],
+    ['Sweden', 'Stockholm'],
+    ['Norway', 'Oslo']
+]
 
-// console.table(countries)
+console.table(countries)
 
-// const countryA = {
-//     'Finland': 'Helsinki',
-//     'Sweden': 'Stockholm',
-//     'Norway': 'Oslo'
-// }
+const countryA = {
+    'Finland': 'Helsinki',
+    'Sweden': 'Stockholm',
+    'Norway': 'Oslo'
+}
 
-// console.table(countryA)
+console.table(countryA)
 
 const names = ['Asabeneh', 'Brook', 'David', 'John']
-const countries = [
+const countryB = [
   ['Finland', 'Helsinki'],
   ['Sweden', 'Stockholm'],
   ['Norway', 'Oslo']
@@ -68,8 +68,8 @@ console.group('Names')
 console.log(names)
 console.groupEnd()
 
-console.group('Countries')
-console.log(countries)
+console.group('CountryB')
+console.log(countryB)
 console.groupEnd()
 
 console.group('Users')
