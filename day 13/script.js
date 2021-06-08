@@ -75,4 +75,10 @@ console.groupEnd()
 console.group('Users')
 console.log(user)
 console.log(users)
-console.groupEnd()
+console.groupEnd("mubby ::")
+
+
+//Exercises:Level 2
+console.assert(10 > 2 * 10, 'This is incorrect')
+console.warn("THIS IS A WARNING MESSAGE")
+console.error('THIS IS AN ERROR MESSAGE')
