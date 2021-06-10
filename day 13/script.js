@@ -82,3 +82,15 @@ console.groupEnd("mubby ::")
 console.assert(10 > 2 * 10, 'This is incorrect')
 console.warn("THIS IS A WARNING MESSAGE")
 console.error('THIS IS AN ERROR MESSAGE')
+
+try {
+  let lastName = 'Yetayeh'
+  let fullName = fistName + ' ' + lastName
+} catch (err) {
+  console.log(err)
+}
+
+
+localStorage.setItem('age', 20)
+
+console.log(localStorage)
