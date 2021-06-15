@@ -17,3 +17,8 @@ const nodeList = document.querySelectorAll('p')
 for (let i = 0; i < nodeList.length; i++) {
   console.log(nodeList[i])
 }
+
+const changedFouthPara = document.querySelector('#id3')
+changedFouthPara.textContent = 'Fourth Paragraph'
+
+console.log(nodeList)
