@@ -235,8 +235,8 @@ const countries = [
     'Zimbabwe'
 ]
 
-const countriesEl = document.createElement('div')
-
+const countriesEl = document.createElement('div.country')
+bodyEl.appendChild(countriesEl)
 countries.forEach((country) => {
     const singleCountry = document.createElement('p');
     countriesEl.appendChild(singleCountry).textContent = country;
