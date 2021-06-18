@@ -1,4 +1,5 @@
 const bodyEl = document.querySelector('body')
+bodyEl.style.textAlign = 'center'
 const title = document.createElement('h1')
 title.classList.add('title')
 title.textContent = 'WORLD COUNTRIES LIST'
@@ -45,7 +46,7 @@ const countries = [
     'Algeria',
     'Andorra',
     'Angola',
-    'Antigua and Barbuda',
+    `Antigua and Barbuda`,
     'Argentina',
     'Armenia',
     'Australia',
@@ -235,13 +236,29 @@ const countries = [
     'Zimbabwe'
 ]
 
+
 const countriesEl = document.createElement('div.country')
 bodyEl.appendChild(countriesEl)
 countries.forEach((country) => {
     const singleCountry = document.createElement('p');
-    countriesEl.appendChild(singleCountry).textContent = country;
+    countriesEl.appendChild(singleCountry).textContent = country.toUpperCase();
+    singleCountry.style.border = '#F5F5F7 1px solid'
+    singleCountry.style.borderRadius = '5px'
+    singleCountry.style.height = '6rem'
+    singleCountry.style.display = 'grid' 
+    singleCountry.style.justifyContent = 'center'
+    singleCountry.style.alignItems = 'center'
 });
 
+
+countriesEl.style.display = 'grid'
+countriesEl.style.gridTemplateColumns = 'repeat(6, 1fr)';
+countriesEl.style.maxWidth = '40rem';
+countriesEl.style.margin = 'auto';
+countriesEl.style.gridGap = '2px';
+countriesEl.style.fontSize = '0.7rem'
+countriesEl.style.fontWeight = '600'
+``
 
 
 bodyEl.style.fontFamily = 'Avenir, Segoe ui, Ubuntu, Sans-serif'
