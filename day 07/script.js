@@ -92,3 +92,28 @@ function weight(mass, gravity) {
 }
 
 weight(4, 2)
+
+
+function sumNum() {
+    let sum = 0;
+    for(i = 0; i < arguments.length; i++) {
+        sum += arguments[i]
+    }
+    console.log(sum)
+}
+
+sumNum(1, 4, 5)
+
+
+const changeToUpperCase = arr => {
+    const newArr = []
+    for (const element of arr) {
+      newArr.push(element.toUpperCase())
+    }
+    return newArr
+  }
+  
+let arrOfName = ["Mubby", "Shewa", "ss"]
+
+  console.log(changeToUpperCase(arrOfName  ))
+
