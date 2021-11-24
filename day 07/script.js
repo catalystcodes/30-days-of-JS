@@ -95,7 +95,7 @@ weight(4, 2)
 
 
 function sumNum() {
-    let sum = 0;
+    let sum =    0;
     for(i = 0; i < arguments.length; i++) {
         sum += arguments[i]
     }
@@ -117,3 +117,13 @@ let arrOfName = ["Mubby", "Shewa", "ss"]
 
   console.log(changeToUpperCase(arrOfName  ))
 
+
+function changeToLowwerCase(arr1) {
+    const  newArr2 = [] 
+    for (const element of arr1) {
+        newArr2.push(element.toLowerCase())
+    }
+    return newArr2
+}
+
+console.log(changeToLowwerCase(["MUBBY", "SHADE", "FOLA"]))
