@@ -2102,4 +2102,6 @@ let listOfCountries = [
 //List of countries language
 const countrieslanguages = listOfCountries.map(country => country.languages).flat()
 console.log(countrieslanguages)
-	
+
+const languages = new Set(countrieslanguages)
+console.log({ languages, count: languages.size })
