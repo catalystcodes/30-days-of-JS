@@ -71,12 +71,12 @@ class Man {
 	  const fullName = this.firstName + ' ' + this.lastName
 	  return fullName
 	}
-	// get getScore() {
-	// 	return this.score
-	// }
-	// get getSkills() {
-	// 	return this.skills
-	// }
+	get getScore() {
+		return this.score
+	}
+	get getSkills() {
+		return this.skills
+	}
 	set setScore(score) {
 		this.score += score
 	}
@@ -86,28 +86,93 @@ class Man {
 	getManInfo() {
 		let fullNameOfMan = this.getFullName()
 		let manSkills =
-		this.skills.length > 0 &&
-		this.skills.slice(0, this.skills.length - 1).join(',')+`and ${this.skills[this.skills.length - 1]}`
-		let formattedSkills =  manSkills ? `He knows ${manSkills}` : ''
-
-		let info = `${fullNameOfMan} is ${this.age}. He lives ${this.city}, He knoew ${formattedSkills}`
+		this.skills.length > 0 && this.skills.slice(0, this.skills.length - 1).join(',')+`and ${this.skills[this.skills.length - 1]}`
+		let formattedSkills =  manSkills ? `He/She knows ${this.skills}` : ''
+		// console.log(formattedSkills)  THIS IS THE FORMATTED SKILLS => sKILLS SET BELOW 👇
+		let info = `${fullNameOfMan} is ${this.age}.	He/She lives ${this.city}, He knoew ${formattedSkills}`
 		return info
 	}
 }
 
-const Man1 = new Man('Muhammad', 'Mubaraq',20, 'Nigria', 'Ilorin')
-const Man2 = new Man('Mufidat', 'Abdulrazaq',25, 'Nigria', 'Ilorin')
+const Man1 = new Man('Muhammad', 'Mubaraq',5, 'Nigria', 'Ilorin')
+const Man2 = new Man('Mufidat', 'Abdulrazaq',10, 'Nigria', 'Ilorin')
 const Man3 = new Man('Aisha', 'Abdulfatah',15, 'Nigria', 'Ilorin')
 
-Man1.setSkill = 1
-Man1.setSkill= 'Ruby'
-Man1.setSkill= 'React '
-Man1.setSkill= 'Js'
+Man1.setScore = 1
+Man1.setSkill = ['Ruby', 'React', 'Js']
 
-Man2.setSkill = 2
-Man2.setSkill= 'HTML'
-Man2.setSkill= 'CSS'
-Man2.setSkill= 'Js'
+Man2.setScore = 2
+Man2.setSkill = ['HTML', 'CSS', 'Js']
+
 
 console.log(Man1.getManInfo())
+console.log(Man2.getManInfo())
 
+//Static Method
+
+class Coder {
+	constructor(firstName, lastName, age, country, city) {
+	  this.firstName = firstName
+	  this.lastName = lastName
+	  this.age = age
+	  this.country = country
+	  this.city = city
+	  this.score = 0
+	  this.skills = []
+	}
+	getFullName() {
+	  const fullName = this.firstName + ' ' + this.lastName
+	  return fullName
+	}
+	get getScore() {
+	  return this.score
+	}
+	get getSkills() {
+	  return this.skills
+	}
+	set setScore(score) {
+	  this.score += score
+	}
+	set setSkill(skill) {
+	  this.skills.push(skill)
+	}
+	getPersonInfo() {
+	  let fullName = this.getFullName()
+	  let skills =
+		this.skills.length > 0 &&
+		this.skills.slice(0, this.skills.length - 1).join(', ') +
+		  ` and ${this.skills[this.skills.length - 1]}`
+  
+	  let formattedSkills = skills ? `He knows ${skills}` : ''
+  
+	  let info = `${fullName} is ${this.age}. He lives ${this.city}, ${this.country}. ${formattedSkills}`
+	  return info
+	}
+	static favoriteSkill() {
+	  const skills = ['HTML', 'CSS', 'JS', 'React', 'Python', 'Node']
+	  const index = Math.floor(Math.random() * skills.length)
+	  return skills[index]
+	}
+	static showDateTime() {
+	  let now = new Date()
+	  let year = now.getFullYear()
+	  let month = now.getMonth() + 1
+	  let date = now.getDate()
+	  let hours = now.getHours()
+	  let minutes = now.getMinutes()
+	  if (hours < 10) {
+		hours = '0' + hours
+	  }
+	  if (minutes < 10) {
+		minutes = '0' + minutes
+	  }
+  
+	  let dateMonthYear = date + '.' + month + '.' + year
+	  let time = hours + ':' + minutes
+	  let fullTime = dateMonthYear + ' ' + time
+	  return fullTime
+	}
+  }
+  
+  console.log(Coder.favoriteSkill())
+  console.log(Coder.showDateTime())
