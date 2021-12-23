@@ -176,3 +176,35 @@ class Coder {
   
   console.log(Coder.favoriteSkill())
   console.log(Coder.showDateTime())
+
+class Student extends Person {
+	saySomething () {
+		console.log('i am the child of the Person called "Student"')
+	}
+}
+
+const s1 = new Student('Muzamill', 'Abdulraheem', 100, ['JS','Ruby','HTML'], 'Nigria')
+
+console.log(s1.saySomething())
+console.log(s1)
+
+
+//Exercises Level 1
+
+class Animal {
+	constructor (name, age, color, legs) {
+		this.name = name
+		this.age = age
+		this.color = color
+		this.legs = legs
+	}
+}
+
+const ant = new Animal('Ant', 1, 'Black', 6)
+const spider = new Animal('Spider', 3, 'Black', 8)
+const cat = new Animal('Cat', 4, 'white', 4)
+const dog = new Animal('Cat', 4, 'Brown', 4)
+
+console.log(cat)
+console.log(ant)
+console.log(spider)
