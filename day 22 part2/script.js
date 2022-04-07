@@ -13,8 +13,8 @@ const taskEls = document.querySelectorAll('li')
 //style
 bodyEl.style.fontFamily = 'Avenir, Segoe ui, Ubuntu, Sans-serif'
 wrapperEl.style.maxWidth = '40rem'
-wrapperEl.style.margin = 'auto'
-headerEl.style.textAlign = 'center'
+    wrapperEl.style.margin = 'auto'
+    headerEl.style.textAlign = 'center'
 h1El.style.marginBottom = '-1rem'
 document.getElementById('year').style.fontSize = '4rem'
 document.getElementById('time').style.padding = '0.25rem 1.5rem'
@@ -35,3 +35,5 @@ const challengeFive = document.querySelector('.challengeFive');
 const challengeSix = document.querySelector('.challengeSix');
 const challengeSeven = document.querySelector('.challengeSeven');
 const challengeEight = document.querySelector('.challengeEight');
+
+console.log(headerEl)

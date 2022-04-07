@@ -109,9 +109,11 @@ const users = {
 const people = Object.keys(users)
 
 const skillsLength = people.map(person => {
-    const personData = users[person]
+    const personData = users[person]    
     return personData.skills.length
 })
+
+console.log(skillsLength, "jjj")
 
 const highestSkills = Math.max(...skillsLength)
 
@@ -135,7 +137,7 @@ console.log(pointUpTo50)
 const skillsOnly = people.map(person => {
         const personData = users[person]
         return personData.skills
-    })
+})
     //MERN STACK
 
 let MERN = ['MongoDB', 'Express', 'React', 'Node']
